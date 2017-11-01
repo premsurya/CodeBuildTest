@@ -8,7 +8,7 @@ env:
 phases:
  install:
   commands:
-   - yum install telnet
+   - apt-get install telnet
    - printenv
  pre_build:
   commands:
