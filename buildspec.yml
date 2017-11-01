@@ -15,7 +15,7 @@ phases:
    - chmod +X test.sh
  build:
   commands:
-   - ./test.sh
+   - bash test.sh
  post_build:
   commands:
    - echo "Nothing to do here @ post_build"
