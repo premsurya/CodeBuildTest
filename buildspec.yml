@@ -11,7 +11,7 @@ phases:
    - printenv
  pre_build:
   commands:
-   - echo "exit 4" >> test.sh
+   - echo "exit 0" >> test.sh
    - chmod +X test.sh
  build:
   commands:
