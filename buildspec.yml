@@ -1,0 +1,26 @@
+version: 0.2
+
+env:
+ variables:
+  env: "dev"
+  dept: "ps"
+
+phases:
+ install:
+  commands:
+   - yum install telnet
+   - printenv
+ pre_build:
+  commands:
+   - echo "exit 4" >> test.sh
+   - chmod +X test.sh
+ build:
+  commands:
+   - ./test.sh
+ post_build:
+  commands:
+   - echo "Nothing to do here @ post_build"
+
+artifacts:
+ files:
+  -application.py
